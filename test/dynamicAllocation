@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+const int kMaxStr = 100;
+
+/*
+// 문자열 비교 But C 와 C++ 스타일 혼합
+
+bool IsEqual(const char *str1, const char *str2){
+
+    int len = strlen(str1);
+
+    for(int i = 0; i < len; i++){
+        if(str1[i] != str2[i]){
+            return false;        
+        }
+    }
+
+    return true;
+}
+*/
+
+int main(){
+
+    //동적 할당
+    // Heap 에 잡혀있어서 주솟값 차이가 정적 배열이랑 좀 난다.
+    // new 로 할당받은 메모리는 프로그램 끝나기 전에 풀어줘야함;;
+    char *dynamic_array = new char[kMaxStr];
+
+
+
+    //
+    delete[] dynamic_array; // 배열 삭제시
+     
+    return 0;
+}
