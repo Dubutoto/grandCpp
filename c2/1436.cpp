@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std; 
 
@@ -18,6 +19,5 @@ int main(){
 
     cout << num - 1 << '\n';
 
-  
     return 0;
 }

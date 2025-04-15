@@ -17,10 +17,8 @@ int main(){
     int a = x;
     int b = y;
 
-    
     //유클리드 호제법
     while(y != 0){
-
         int r = x % y;
         x = y;
         y = r; 

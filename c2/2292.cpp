@@ -18,6 +18,5 @@ int main(){
     }
     
     cout << dis << endl;
-  
     return 0;
 }

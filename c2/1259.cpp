@@ -20,6 +20,5 @@ int main(){
             cout << "no" << '\n';
         }
     }
-  
     return 0;
 }
