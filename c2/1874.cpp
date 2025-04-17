@@ -21,7 +21,7 @@ int main(){
         cin >> target;
    
         while(curr <= target){
-            s.push(curr++);
+            s.push(curr++); // 1부터 넣어야하니까 후위 연산자
             result.push_back('+');
         }
 

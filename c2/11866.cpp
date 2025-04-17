@@ -25,8 +25,8 @@ int main(){
             q.push(q.front());
             q.pop();
         }
-        v.push_back(q.front());
-        q.pop();
+        v.push_back(q.front()); //제거 되는 사람 벡터에 기록
+        q.pop(); //제거
     }
 
     cout << "<";

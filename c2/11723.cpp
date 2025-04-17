@@ -19,8 +19,6 @@ int main(){
         string cmd;
         cin >> cmd;
 
-        ostringstream output;
-
         if(cmd == "add"){
             int x;
             cin >> x;
@@ -32,7 +30,7 @@ int main(){
         }else if(cmd == "check"){
             int x;
             cin >> x;
-            output += (s.count(x) ? "1\n" : "0\n"); 
+            output << (s.count(x) ? "1\n" : "0\n");
         }else if(cmd == "toggle"){
             int x;
             cin >> x;
