@@ -13,7 +13,7 @@ void dfs(int node){
 
     visited[node] = true;
     dfsResult.push_back(node);
-    if(graph[node].size() > 1) sort(graph[node].begin(), graph[node].end());
+   // if(graph[node].size() > 1) sort(graph[node].begin(), graph[node].end());
 
     for(int next: graph[node]){
         if(!visited[next]){
@@ -32,7 +32,7 @@ void bfs(int start){
     while(!q.empty()){
         int node = q.front();
         q.pop();
-        if(graph[node].size() > 1) sort(graph[node].begin(), graph[node].end());
+       // if(graph[node].size() > 1) sort(graph[node].begin(), graph[node].end());
 
         for(int next: graph[node]){
             if(!visited[next]){
@@ -59,6 +59,10 @@ int main(){
         cin >> x >> y;
         graph[x].push_back(y);
         graph[y].push_back(x);
+    }
+
+    for(int i = 0; i < N + 1; i++){
+        sort(graph[i].begin(),graph[i].end());
     }
 
     dfs(V);
