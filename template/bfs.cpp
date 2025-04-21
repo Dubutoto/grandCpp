@@ -9,20 +9,17 @@ vector<bool> visited;
 
 void bfs(int start){
     queue<int> q;
-    q.push(start);
     visited[start] = true;
-
+    q.push(start);
     while(!q.empty()){
         int node = q.front();
         q.pop();
 
-        // 방문 완료 -> 큐에서 제외시킴
-        // 다음 방문 탐색을 위한 반복문
-        for(int next: graph[node]){
+        for(int next : graph[node]){
             if(!visited[next]){
-                visited[next] = true;
                 q.push(next);
-            }
+                visited[next] = true;
+            } 
         }
     }
 }
@@ -31,13 +28,22 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int N; 
-    cin >> N;
+    int N, M;
+    cin >> N >> M;
+
     graph.resize(N + 1);
-    visited.resize(N + 1, false);
+    visited.resize(N + 1);
+    
+    for(int i = 0; i < M; i++){
+        int x, y;
+        cin >> x >> y;
 
+        graph[x].push_back(y);
+        graph[y].push_back(x); // 무방향
+        
+    }
+    
     bfs(1);
-
 
     return 0;
 }
