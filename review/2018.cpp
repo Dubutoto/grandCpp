@@ -19,7 +19,7 @@ int main(){
         if(sum >= N){
             sum -= l;
             l++;
-        }else if(r == N){
+        }else if(r == N + 1){
             break;
         }else if(sum < N){
             sum += r;
