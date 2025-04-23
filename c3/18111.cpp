@@ -36,8 +36,8 @@ int main(){
                     time += diff * 2;
                     block += diff;
                 }else if (diff < 0){
-                    time = time - diff;
-                    block = block - diff; 
+                    time += (-diff);
+                    block -= (-diff); 
                 }
             }
         }
