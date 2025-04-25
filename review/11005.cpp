@@ -12,11 +12,12 @@ int main(){
 
     cin >> N >> B;
 
-    int remainder = 0;
+    int remainder;
     string answer = "";
+    
 
     while(N > 0){
-        remainder = N%B;
+        remainder = N % B;
 
         if(remainder < 10){
             answer += (char)(remainder + '0');
@@ -24,12 +25,12 @@ int main(){
             answer += (char)('A' + (remainder - 10));
         }
 
-        N = N/B;
+        N = N / B;
     }
 
     reverse(answer.begin(), answer.end());
 
     cout << answer << '\n';
-    
+
     return 0;
 }

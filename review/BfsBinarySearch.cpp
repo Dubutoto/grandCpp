@@ -59,7 +59,7 @@ int main(){
     cin.tie(NULL);
 
     cin >> N;
-    int hint = N*(N - 1)/2;
+    int hint = N * (N - 1)/2;
 
     edges.reserve(hint);
 
